@@ -119,8 +119,8 @@ if ~isequal(file_name,0)
 
     final_output = Softmax(input_of_output_node);
 
-    ayla = round(Sum(final_output(1:7)),1) * 100;
-    xenia = round(Sum(final_output(8:14)),1) * 100;
+    ayla = round(Sum(final_output(1:7)),3) * 100;
+    xenia = round(Sum(final_output(8:14)),3) * 100;
     
     set(handles.txt_ayla, 'String', ayla);
     set(handles.txt_xenia, 'String', xenia);

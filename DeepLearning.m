@@ -21,6 +21,7 @@ input_of_hidden_layer3 = w3* output_of_hidden_layer2;
 output_of_hidden_layer3 = ReLU(input_of_hidden_layer3);
  
 input_of_output_node = w4* output_of_hidden_layer3;
+
 input_of_output_nodee = input_of_output_node;
 
 final_output = Softmax(input_of_output_nodee); %%

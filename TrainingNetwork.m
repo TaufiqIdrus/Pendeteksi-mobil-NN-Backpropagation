@@ -24,8 +24,6 @@ for i=nfiles_ayla+1:nfiles_ayla + nfiles_xenia
    input_Image(:,:,i) =  normalisasi(file_gs_xenia);
 end
 
-
- 
 correct_Output = zeros(14,14);
 correct_Output(1,1) = 1;
 correct_Output(2,2) = 1;
@@ -42,9 +40,6 @@ correct_Output(12,12) = 1;
 correct_Output(13,13) = 1;
 correct_Output(14,14) = 1;
 
-
-
- 
 w1 = 2*rand(20,7500)-1;
  
 w2 = 2*rand(20,20)-1;
@@ -52,14 +47,9 @@ w2 = 2*rand(20,20)-1;
 w3 = 2*rand(20,20)-1;
  
 w4 = 2*rand(14, 20)-1;
-
-% load('w1.mat');
-%  load('w2.mat');
-%  load('w3.mat');
-% load('w4.mat');
  
-for epoch = 1:10000
+for epoch = 1:1000
 [w1, w2, w3, w4] = DeepLearning(w1, w2, w3, w4, input_Image, correct_Output);
-
+epoch
 end
 save('DeepNeuralNetwork.mat')
